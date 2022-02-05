@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+   <!-- Style Sheets-->
+   <link rel="stylesheet" href="css/reset-stylesheet.css">
+   <link rel="stylesheet" href="css/stylesheet.css">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+   <!--LOCAL FONTAWESOME 5-->
+   <!--<link href="css/all.css" rel="stylesheet">--> <!--load all styles -->
+   <!--<script defer src="js/all.js"></script>--> <!--load all styles -->
+   
+   <title>Connie</title>
+</head>
+<body>
+   
+   <div class="wrapper">
+      <nav class="menu-half-cirlce" id="menu-container">
+         <div class="menu-btn" onclick="menu-expand()">
+            <i class="fas fa-bars" id="bars"></i>
+            <i class="fas fa-times" id="close"></i>
+         </div>
+         <ul class="menu" id="menu">
+            <li class="menu-item" title="Scroll" onclick="preMessage()"><i class="fas fa-scroll"></i></li>
+            <li class="menu-item" onclick="viewForm()"><i class="fas fa-envelope-open-text"></i></li>
+            <li class="menu-item"><i class="fas fa-hamsa"></i></li>
+            <li class="menu-item"><i class="fas fa-infinity"></i></li>
+         </ul>
+      </nav>
+
+      <div class="form-container" id="form-container">
+         <form action="" id="main-form">
+            <div class="form-close-btn"><i class="far fa-window-close" onclick="viewForm()"></i></div>
+            <label for="code">Input your code for the next clue.</label>
+            <input type="text" name="code" id="code-ele">
+            <br>
+            <input type="button" id="submit-btn" value="SUBMIT" onclick="messageInput()">
+         </form>
+      </div>
+
+      <!-- PREVIOUS MESSAGES FOUND SECTION -->
+      <div id="previous-messages-container">
+         <div class="header">
+            <h2 class="section-title"><span class="section-title-icon"><i class="fas fa-envelope-open-text"></i></span>Previously Found Messages</h2>
+            <div class="close-btn" id="close-btn"><i class="far fa-window-close"></i></div>
+            <!--<div class="flyout-debug" id="flyout-debug"></div>-->
+         </div>
+
+         <div class="message-box-container">
+            <div class="message-box-wrapper">
+               <p class="date-found">- Date Found: <span class="date">11/20/2021</span></p>
+               <p class="message">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa omnis quod quo modi, eveniet doloremque voluptatem in. Fuga ut voluptatum, et nesciunt rem blanditiis reiciendis dicta sed porro ex eius.</p>
+            </div>
+   
+            <div class="message-box-wrapper">
+               <p class="date-found">- Date Found: <span class="date">11/20/2021</span></p>
+               <p class="message">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa omnis quod quo modi, eveniet doloremque voluptatem in. Fuga ut voluptatum, et nesciunt rem blanditiis reiciendis dicta sed porro ex eius.</p>
+            </div>
+   
+            <div class="message-box-wrapper">
+               <p class="date-found">- Date Found: <span class="date">11/20/2021</span></p>
+               <p class="message">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa omnis quod quo modi, eveniet doloremque voluptatem in. Fuga ut voluptatum, et nesciunt rem blanditiis reiciendis dicta sed porro ex eius.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!--<div id="new-message"> 
+      <p>New message when code entered</p>
+   </div> -->
+
+
+   <!--<div id="last-message">
+      <p>Last message found text</p>
+   </div>
+-->
+   <div class="demo"></div>
+
+
+
+   <script src="js/app.js"></script>
+</body>
+</html>
