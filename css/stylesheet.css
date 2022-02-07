@@ -236,8 +236,8 @@ input{
   z-index: -1;
 }*/
 #previous-messages-container{
-   position: absolute;
-   /* position: relative; */
+   /* position: absolute; */
+   position: relative;
    right: 100%;
    display: flex;
    flex-wrap: wrap;

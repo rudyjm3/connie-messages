@@ -54,16 +54,16 @@ function preMessage() {
       // pContainer.style.opacity ="1";
       // pContainer.style.right ="0%";
       // pContainer.style.display ="block";
-      pContainer.style.cssText = "opacity:1; right:50%;"
+      pContainer.style.cssText = "opacity: 1; right: 0%"
       pm=1;
       console.log(pm);
    } else {
       // pContainer.style.opacity = "0";
       // pContainer.style.right = "50%"; 
-      pContainer.style.cssText = "opacity:0.3;";
+      pContainer.style.cssText = "right: 20%;";
       setTimeout(function(){
-         pContainer.style.right = "right:10%";
-     }, 3000); //wait for atleast  3 seconds before console logging
+         pContainer.style.cssText = "opacity: 0.3;";
+     }, 3000); //wait for at least 3 seconds before console logging
       pm=0;
       console.log(pm);
    }
@@ -93,16 +93,32 @@ let forminput = document.getElementById('code-ele');
 
 function messageInput() {
    let value = forminput.value;
-
-   if (value === "Love"  || "love")
-      console.log("1st if statement log");
-      else if(value === 'Night')
-      console.log("2nd if statement Night");
-      else
-      console.log('That code is not found');
-
-      forminput.value = "";
+   console.log(value);
+   if (value == "Love" || value == 'love') {
+      //console.log("1st if statement");
+      //alert(value + ' Is what was entered. 1st statement');
       viewForm();
+   }
+      else if(value == 'Night' || value == 'night') {
+      //console.log("2nd if statement");
+      //alert(value + ' Is what was entered. 2nd statement');
+      viewForm();
+      }
+      else if(value == 'Queen' || value == 'queen') {
+         //console.log("3rd if statement");
+         //alert(value + ' Is what was entered. 3rd statement');
+         viewForm();
+         }
+         else if(value == 'King' || value == 'king') {
+            //console.log("4th if statement");
+            //alert(value + ' Is what was entered. 4th statement');
+            viewForm();
+            }
+      else {
+      //console.log('That code is not found');
+      alert(value + ' is not in the data base.');
+      forminput.value = ""; 
+      }
 }
    
 
