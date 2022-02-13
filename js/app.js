@@ -1,4 +1,4 @@
-// jQuery Random Background
+// jQuery Random Background Array
 
 $(document).ready(function(){
    var images=['/images/bg-images/bg-1.jpg',
@@ -26,6 +26,13 @@ $(document).ready(function(){
    
    });
 
+// MESSAGES ARRAY  ////////////////////
+let messageArr = [
+   {title: "Section Title"},
+   {mess: "This is the message that will display"},
+   {nextClue: "Look where the path leads into the forest"}
+];
+console.log(messageArr);
 // Menu Open Close
 var i=0;
 function expand(){
@@ -55,6 +62,7 @@ function preMessage() {
       // pContainer.style.right ="0%";
       // pContainer.style.display ="block";
       pContainer.style.cssText = "opacity: 1; right: 0%"
+      document.getElementById('test-node').innerText = JSON.stringify(messageArr, null, 2);
       pm=1;
       console.log(pm);
    } else {
@@ -87,7 +95,7 @@ console.log(m);
    }
 }
 
-// Message Form  /////////////////////////////////////////////////////////
+// Input Form  /////////////////////////////////////////////////////////
 
 let forminput = document.getElementById('code-ele');
 
@@ -97,6 +105,7 @@ function messageInput() {
    if (value == "Love" || value == 'love') {
       //console.log("1st if statement");
       //alert(value + ' Is what was entered. 1st statement');
+      document.getElementById('demo').style.cssText = "display:block; opacity"
       viewForm();
    }
       else if(value == 'Night' || value == 'night') {
@@ -122,7 +131,25 @@ function messageInput() {
 }
    
 
+// Hint accordion
+var acc = document.getElementsByClassName("accordion");
+var i;
 
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
 
 
 // CLOSE MESSAGE CONTAINER
